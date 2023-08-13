@@ -10,11 +10,11 @@ public class EnemyBasic extends GameObject{
 	
 	private int enemySpeed;
 	
-	//private int basicEnemyHealth = 100 ;
+	private static int basicEnemyHealth = 30 ;
 	
 
 	public EnemyBasic(int x, int y, int speed, ID id,GameObject player, Handler handler) {
-		super(x, y, 100, id);
+		super(x, y,basicEnemyHealth , id);
 		this.player = player;
 		this.enemySpeed = speed;
 		this.handler = handler; 
@@ -49,7 +49,7 @@ public class EnemyBasic extends GameObject{
 	    // Ensure the enemy stays within certain bounds
 	    x = Game.clamp(x, 355, Game.WIDTH -368);
 		y = Game.clamp(y, 115,Game.HEIGHT - 80);
-		//DEBUG System.out.println("EnemyHealth "+health);
+		System.out.println("EnemyHealth "+health);
 		if (health <= 0 ) {
 			handler.removeObject(this);
 		}

@@ -7,7 +7,7 @@ public class Player extends GameObject {
 	
 	Handler handler;
 	HUD hud ;
-	public static int playerHealth = 100;
+	public static int playerHealth = 30;
 	public BufferedImage playerImage;
 	public Player(int x, int y, ID id, Handler handler,HUD hud) {
 		super(x, y,playerHealth, id);
@@ -37,7 +37,7 @@ public class Player extends GameObject {
 			if (tempObject.getId() == ID.EnemyBasic) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					// collision code
-					int newHealth = hud.getHealth() - 2;
+					int newHealth = hud.getHealth() - 5;
 					hud.setHealth(newHealth);
 					handler.removeObject(tempObject);
 					

@@ -44,7 +44,7 @@ public class Game extends Canvas implements Runnable  {
 		new Window(WIDTH,HEIGHT,title,this);
 		
 		try {
-            backgroundImage = ImageIO.read(getClass().getResource("/images/Background (2).png"));
+            backgroundImage = ImageIO.read(getClass().getResource("/images/Background.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -54,6 +54,9 @@ public class Game extends Canvas implements Runnable  {
 		// add objects to the screen / game.
 	    handler.addObject(new EnemyBasic(WIDTH/2-70,HEIGHT/2-16,0,ID.EnemyBasic,player,handler));
 	    handler.addObject(new EnemyBasic(WIDTH/2-70,HEIGHT/2-70,0,ID.EnemyBasic,player,handler));
+	    handler.addObject(new EnemyBasic(WIDTH/2+50,HEIGHT/2-70,0,ID.EnemyBasic,player,handler));
+	    handler.addObject(new EnemyBasic(WIDTH/2+90,HEIGHT/2-70,0,ID.EnemyBasic,player,handler));
+	    handler.addObject(new EnemyBasic(WIDTH/2-40,HEIGHT/2-70,0,ID.EnemyBasic,player,handler));
 	    
 		
 	    

@@ -57,7 +57,7 @@ public class Bullet extends GameObject {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					// collision code
 					int enemyHealth = tempObject.getHealth();
-					enemyHealth -= 20;
+					enemyHealth -= gun.getDamage();
 					tempObject.setHealth(enemyHealth);
 					handler.removeObject(this);
 					

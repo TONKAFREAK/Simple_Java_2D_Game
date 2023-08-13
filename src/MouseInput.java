@@ -22,7 +22,7 @@ public class MouseInput extends MouseAdapter {
 				
 				if (key == MouseEvent.BUTTON1) {
 				//DEBUG	System.out.println("Mouse clicked at "+mouseX+", "+mouseY);
-					handler.addObject(new Bullet(tempObject.getX(),tempObject.getY(),ID.Bullet, new Guns(5,2,3,20,Color.cyan),handler));
+					handler.addObject(new Bullet(tempObject.getX()+(7),tempObject.getY()+(7),ID.Bullet, new Guns(5,3,3,5,Color.cyan),handler));
 				}
 			}
 			

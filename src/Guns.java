@@ -33,4 +33,8 @@ public class Guns {
 	public Color getColor() {
 		return color;
 	}
+	
+	public int getDamage() {
+		return damage;
+	}
 }
