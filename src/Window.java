@@ -1,6 +1,7 @@
 import java.awt.Canvas;
 import java.awt.Dimension;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class Window extends Canvas {
@@ -10,6 +11,7 @@ public class Window extends Canvas {
 	public Window(int width, int height, String title, Game game){
 		
 		JFrame frame = new JFrame(title);
+		ImageIcon img = new ImageIcon(getClass().getResource("/images/logoPiskel64x64.png"));
 		
 		frame.setPreferredSize(new Dimension(width,height));
 		frame.setMaximumSize(new Dimension(width,height));
@@ -20,6 +22,7 @@ public class Window extends Canvas {
 		frame.setLocationRelativeTo(null);
 		frame.add(game);
 		frame.setVisible(true);
+		frame.setIconImage(img.getImage());
 		game.start();
 		
 	}
