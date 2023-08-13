@@ -1,1 +1,1 @@
-ready gameBase **BOMBASTIC**
+**SIMPLE_JAVA_2D_GAME  BOMBASTIC**
